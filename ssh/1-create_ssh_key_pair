@@ -1,12 +1,3 @@
 #!/usr/bin/env bash
-
-# Defining variables
-PRIVATE_KEY_NAME="school"
-KEY_SIZE=4096
-KEY_PASSPHRASE="betty"
-
-# generating the RSA key pair
-ssh-keygen -t rsa -b $KEY_SIZE -f $PRIVATE_KEY_NAME -N $KEY_PASSPHRASE
-
-# Output the result
-echo "RSA key pair created: $PRIVATE_KEY_NAME (private key) and ${PRIVATE_KEY_NAME}.pub (public key)"
+# Bash script that creates an RSA key pair
+ssh-keygen -t rsa -b 4096 -P betty -f school
